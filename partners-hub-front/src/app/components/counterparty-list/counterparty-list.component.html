@@ -1,7 +1,12 @@
 <div class="counterparty-list">
   <h2>Каталог контрагентов</h2>
+  <div class="sort-container">
+    <button (click)="toggleSortOrder()" class="sort-button">
+      Сортировать по оценке: {{ sortOrder === 'asc' ? '↑' : '↓' }}
+    </button>
+  </div>
   <div class="counterparties">
-    <div *ngFor="let counterparty of counterparties" class="counterparty-card">
+    <div *ngFor="let counterparty of displayedCounterparties" class="counterparty-card">
       <img [src]="'data:image/jpeg;base64,' + counterparty.image" [alt]="counterparty.name" class="counterparty-image">
       <h3 [ngClass]="getRatingClass(counterparty.partnership_rating)">{{ counterparty.name }}</h3>
       <p><strong>Телефон:</strong> {{ counterparty.phone }}</p>
@@ -18,3 +23,4 @@
     </div>
   </div>
 </div>
+
