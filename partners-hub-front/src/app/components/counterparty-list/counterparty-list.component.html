@@ -3,7 +3,7 @@
   <div class="counterparties">
     <div *ngFor="let counterparty of counterparties" class="counterparty-card">
       <img [src]="'data:image/jpeg;base64,' + counterparty.image" [alt]="counterparty.name" class="counterparty-image">
-      <h3>{{ counterparty.name }}</h3>
+      <h3 [ngClass]="getRatingClass(counterparty.partnership_rating)">{{ counterparty.name }}</h3>
       <p><strong>Телефон:</strong> {{ counterparty.phone }}</p>
       <p><strong>Email:</strong> {{ counterparty.email }}</p>
       <p><strong>Страна:</strong> {{ counterparty.country }}</p>

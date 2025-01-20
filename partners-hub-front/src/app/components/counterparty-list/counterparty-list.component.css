@@ -43,7 +43,7 @@ h2 {
 .counterparty-image {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -52,8 +52,23 @@ h2 {
 .counterparty-card h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #34495e;
   margin-bottom: 15px;
+}
+
+.rating-poor {
+  color: #e74c3c;
+}
+
+.rating-average {
+  color: #f39c12;
+}
+
+.rating-good {
+  color: #2ecc71;
+}
+
+.rating-excellent {
+  color: #27ae60;
 }
 
 .counterparty-card p {
@@ -110,3 +125,4 @@ h2 {
     font-size: 14px;
   }
 }
+

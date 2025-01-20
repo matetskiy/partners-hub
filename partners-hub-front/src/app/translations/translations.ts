@@ -1,5 +1,3 @@
-// src/app/translations/translations.ts
-
 export interface Translations {
   counterpartyType: {
     [key: string]: string;
