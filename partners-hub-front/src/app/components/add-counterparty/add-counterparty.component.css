@@ -1,0 +1,77 @@
+.add-counterparty-container {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-counterparty-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #FF7E39;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 12px;
+  background-color: #FF7E39;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #FFAA00;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

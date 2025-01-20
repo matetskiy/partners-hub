@@ -1,0 +1,7 @@
+partners-hub-front/.angular
+partners-hub-front/.vscode
+partners-hub-front/dist
+partners-hub-front/node_modules
+.idea
+partners-hub-backend/__pycache__
+partners-hub-backend/venv

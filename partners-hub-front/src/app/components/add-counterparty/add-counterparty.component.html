@@ -1,0 +1,68 @@
+<div class="add-counterparty-container">
+  <h2>Добавление нового контрагента</h2>
+  <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <div>
+      <label for="name">Название:</label>
+      <input type="text" id="name" [(ngModel)]="counterparty.name" name="name" required>
+    </div>
+    <div>
+      <label for="phone">Телефон:</label>
+      <input type="text" id="phone" [(ngModel)]="counterparty.phone" name="phone" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="counterparty.email" name="email" required>
+    </div>
+    <div>
+      <label for="country">Страна:</label>
+      <select id="country" [(ngModel)]="counterparty.country" name="country" required>
+        <option value="" disabled selected>Выберите страну</option>
+        <option value="Armenia">Армения</option>
+        <option value="Azerbaijan">Азербайджан</option>
+        <option value="Belarus">Беларусь</option>
+        <option value="Kazakhstan">Казахстан</option>
+        <option value="Kyrgyzstan">Кыргызстан</option>
+        <option value="Moldova">Молдова</option>
+        <option value="Russia">Россия</option>
+        <option value="Tajikistan">Таджикистан</option>
+        <option value="Turkmenistan">Туркменистан</option>
+        <option value="Uzbekistan">Узбекистан</option>
+        <option value="Georgia">Грузия</option>
+      </select>
+    </div>
+    <div>
+      <label for="address">Адрес:</label>
+      <textarea id="address" [(ngModel)]="counterparty.address" name="address"></textarea>
+    </div>
+    <div>
+      <label for="partnership_rating">Оценка сотрудничества:</label>
+      <select id="partnership_rating" [(ngModel)]="counterparty.partnership_rating" name="partnership_rating" required>
+        <option value="Excellent">Отлично</option>
+        <option value="Good">Хорошо</option>
+        <option value="Average">Удовлетворительно</option>
+        <option value="Bad">Плохо</option>
+      </select>
+    </div>
+    <div>
+      <label for="counterparty_type">Тип контрагента:</label>
+      <select id="counterparty_type" [(ngModel)]="counterparty.counterparty_type" name="counterparty_type" required>
+        <option value="Individual">Физ. лицо</option>
+        <option value="Legal">Юр. лицо</option>
+        <option value="IP">ИП</option>
+      </select>
+    </div>
+    <div>
+      <label for="tax_number">ИНН/УНП:</label>
+      <input type="text" id="tax_number" [(ngModel)]="counterparty.tax_number" name="tax_number" required>
+    </div>
+    <div>
+      <label for="bank_account">Расчетный счет:</label>
+      <input type="text" id="bank_account" [(ngModel)]="counterparty.bank_account" name="bank_account" required>
+    </div>
+    <div>
+      <label for="image">Изображение:</label>
+      <input type="file" id="image" (change)="onFileSelected($event)" accept="image/*" required>
+    </div>
+    <button type="submit">Добавить контрагента</button>
+  </form>
+</div>

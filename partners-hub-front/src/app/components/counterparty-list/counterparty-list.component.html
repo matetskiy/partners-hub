@@ -1,0 +1,40 @@
+<div class="counterparty-list">
+  <h2>Каталог контрагентов</h2>
+  <div class="counterparties">
+    <div *ngFor="let counterparty of counterparties" class="counterparty-card">
+      <!-- Отображение изображения контрагента -->
+      <img [src]="'data:image/jpeg;base64,' + counterparty.image" [alt]="counterparty.name" class="counterparty-image">
+
+      <h3>{{ counterparty.name }}</h3>
+
+      <!-- Телефон -->
+      <p><strong>Телефон:</strong> {{ counterparty.phone }}</p>
+
+      <!-- Email -->
+      <p><strong>Email:</strong> {{ counterparty.email }}</p>
+
+      <!-- Страна -->
+      <p><strong>Страна:</strong> {{ counterparty.country }}</p>
+
+      <!-- Адрес -->
+      <p><strong>Адрес:</strong> {{ counterparty.address }}</p>
+
+      <!-- Оценка сотрудничества -->
+      <p><strong>Оценка сотрудничества:</strong> {{ counterparty.partnership_rating }}</p>
+
+      <!-- Тип контрагента -->
+      <p><strong>Тип контрагента:</strong> {{ counterparty.counterparty_type }}</p>
+
+      <!-- ИНН/УНП -->
+      <p><strong>ИНН/УНП:</strong> {{ counterparty.tax_number }}</p>
+
+      <!-- Расчетный счет -->
+      <p><strong>Расчетный счет:</strong> {{ counterparty.bank_account }}</p>
+
+      <!-- Кнопка удаления для администраторов -->
+      <button *ngIf="isAdmin" (click)="deleteCounterparty(counterparty.id)" class="delete-button">
+        Удалить
+      </button>
+    </div>
+  </div>
+</div>
